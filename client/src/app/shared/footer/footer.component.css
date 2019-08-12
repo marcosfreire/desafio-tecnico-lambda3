@@ -1,0 +1,15 @@
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+.bg-lightgray
+{
+    color: aliceblue;
+    background-color:#0f5d9b;    
+}
+
+a:link {
+    color: aliceblue;
+  }
+  
+  /* visited link */
+  a:visited {
+    color:beige;
+  }
