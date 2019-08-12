@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DateUtils } from 'src/app/utils/data-type-utils/date-utils';
 import { SeoService } from 'src/app/services/seo.service';
 import { HttpbaseService } from 'src/app/services/httpbase.service';
+import { Router } from '@angular/router';
 import { Course, ProfessorViewModel } from '../ProfessorViewModel';
-import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-novo-professor',
@@ -11,20 +11,28 @@ import { FormGroup, FormBuilder } from '@angular/forms';
   styleUrls: ['./novo-professor.component.css']
 })
 export class NovoProfessorComponent implements OnInit {
+  
+  public errors:any[] = [];
+  public tituloErros:string;
+  public exibirErros :boolean = false;
+
+  public professor = new ProfessorViewModel;
 
   public disciplinas: Course[];
+  public idDisciplinaSelecionada: number = 0;
   public disciplinasSelecionadas: Course[] = [];
   public exibirTabelaDisciplinas:boolean = false;
-  public teacherForm: FormGroup;
-  public idCursoSelecionado: number;
-  public professor = new ProfessorViewModel;
+    
   public myDatePickerOptions = DateUtils.getMyDatePickerOptions();
 
-  constructor(seoService: SeoService, private httpbaseService: HttpbaseService) {
+  constructor(seoService: SeoService, 
+              private httpbaseService: HttpbaseService,
+              private router: Router) {
+
     seoService.atribuirTitle('Novo Professor');
   }
 
-  ngOnInit() {
+  ngOnInit() {    
     this.recuperarDisciplinas();
   }
 
@@ -35,14 +43,13 @@ export class NovoProfessorComponent implements OnInit {
   }
 
   adicionarDisciplina() {    
-
-    var itemJaAdicionado = this.disciplinasSelecionadas.findIndex(x => x.id == this.idCursoSelecionado.toString()) !== -1;
-    if(itemJaAdicionado)
+    var itemJaAdicionado = this.disciplinasSelecionadas.findIndex(x => x.id == this.idDisciplinaSelecionada.toString()) !== -1;
+    if(itemJaAdicionado || this.idDisciplinaSelecionada == 0) 
     {
       return false;
     }
 
-    let course = this.disciplinas.find(a => a.id == this.idCursoSelecionado.toString());
+    let course = this.disciplinas.find(a => a.id == this.idDisciplinaSelecionada.toString());
     this.disciplinasSelecionadas.push(course);
     this.exibirTabelaDisciplinas = true;
     this.atualisarCursosProfessor();
@@ -60,9 +67,27 @@ export class NovoProfessorComponent implements OnInit {
   }
 
   adicionarProfessor() {
-    this.httpbaseService.post('api/professores',this.professor).subscribe(
-      a => {
-        console.log(a);
-      });
+        
+    this.professor.dataNascimento =  DateUtils.getMyDatePickerDate(this.professor.dataNascimento);
+
+    this.httpbaseService.post('api/professores',this.professor).subscribe(a => {
+      this.router.navigate(['/professores']);
+    }, responseError => 
+    {
+      if(responseError.status == 400 || responseError.status == 404)
+      {
+        this.tituloErros = "Ops! Corrija os erros abaixo antes de continuar!";
+        this.errors = responseError.error.errors;
+        this.exibirErros = responseError.error.errors != undefined && responseError.error.errors.length > 0;
+      }
+      else{
+        this.exibirErros = true;
+        this.tituloErros = "Ops! Alguma coisa deu errado. :(";
+        this.errors.push('Tente novamente mais tarde.Se o problema persistir, contate o administrador do sistema.');
+        console.log(responseError.error.applicationError);
+
+        // navegar para pagina de erro?
+      }
+    });
   }
 }

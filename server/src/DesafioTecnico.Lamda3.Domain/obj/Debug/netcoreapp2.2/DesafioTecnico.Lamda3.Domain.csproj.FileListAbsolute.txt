@@ -6,3 +6,12 @@ C:\projetos\pessoal\estudos\desafio-tecnico-lambda3\src\DesafioTecnico.Lamda3.Do
 C:\projetos\pessoal\estudos\desafio-tecnico-lambda3\src\DesafioTecnico.Lamda3.Domain\obj\Debug\netcoreapp2.2\DesafioTecnico.Lamda3.Domain.AssemblyInfo.cs
 C:\projetos\pessoal\estudos\desafio-tecnico-lambda3\src\DesafioTecnico.Lamda3.Domain\obj\Debug\netcoreapp2.2\DesafioTecnico.Lamda3.Domain.dll
 C:\projetos\pessoal\estudos\desafio-tecnico-lambda3\src\DesafioTecnico.Lamda3.Domain\obj\Debug\netcoreapp2.2\DesafioTecnico.Lamda3.Domain.pdb
+C:\projetos\pessoal\estudos\desafio-tecnico-lambda3\server\src\DesafioTecnico.Lamda3.Domain\bin\Debug\netcoreapp2.2\DesafioTecnico.Lamda3.Domain.deps.json
+C:\projetos\pessoal\estudos\desafio-tecnico-lambda3\server\src\DesafioTecnico.Lamda3.Domain\bin\Debug\netcoreapp2.2\DesafioTecnico.Lamda3.Domain.dll
+C:\projetos\pessoal\estudos\desafio-tecnico-lambda3\server\src\DesafioTecnico.Lamda3.Domain\bin\Debug\netcoreapp2.2\DesafioTecnico.Lamda3.Domain.pdb
+C:\projetos\pessoal\estudos\desafio-tecnico-lambda3\server\src\DesafioTecnico.Lamda3.Domain\obj\Debug\netcoreapp2.2\DesafioTecnico.Lamda3.Domain.csprojAssemblyReference.cache
+C:\projetos\pessoal\estudos\desafio-tecnico-lambda3\server\src\DesafioTecnico.Lamda3.Domain\obj\Debug\netcoreapp2.2\DesafioTecnico.Lamda3.Domain.csproj.CoreCompileInputs.cache
+C:\projetos\pessoal\estudos\desafio-tecnico-lambda3\server\src\DesafioTecnico.Lamda3.Domain\obj\Debug\netcoreapp2.2\DesafioTecnico.Lamda3.Domain.AssemblyInfoInputs.cache
+C:\projetos\pessoal\estudos\desafio-tecnico-lambda3\server\src\DesafioTecnico.Lamda3.Domain\obj\Debug\netcoreapp2.2\DesafioTecnico.Lamda3.Domain.AssemblyInfo.cs
+C:\projetos\pessoal\estudos\desafio-tecnico-lambda3\server\src\DesafioTecnico.Lamda3.Domain\obj\Debug\netcoreapp2.2\DesafioTecnico.Lamda3.Domain.dll
+C:\projetos\pessoal\estudos\desafio-tecnico-lambda3\server\src\DesafioTecnico.Lamda3.Domain\obj\Debug\netcoreapp2.2\DesafioTecnico.Lamda3.Domain.pdb

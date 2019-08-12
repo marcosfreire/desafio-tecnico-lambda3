@@ -9,17 +9,17 @@ import { HttpbaseService } from 'src/app/services/httpbase.service';
 })
 export class ListaDeProfessoresComponent implements OnInit {
 
-  public teachers: any;
-  public showRecords: boolean;
+  public professores: any;
+  public exibirResultados: boolean;
 
   constructor(seoService: SeoService ,private httpbaseService:HttpbaseService) {
     seoService.atribuirTitle('Professores');
   }
 
-  ngOnInit() {
+  ngOnInit() {    
     this.httpbaseService.get("api/professores").subscribe(data => {
-      this.teachers = data;      
-      this.showRecords = data && data.length > 0;      
+      this.professores = data;      
+      this.exibirResultados = data && data.length > 0;      
     });    
   }
 }

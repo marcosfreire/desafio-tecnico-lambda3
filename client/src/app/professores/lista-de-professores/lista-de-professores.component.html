@@ -19,21 +19,23 @@
         <thead>
           <tr>
             <th>Nome</th>
+            <th>Sobrenome</th>
             <th>Data de nascimento</th>           
             <th></th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let teacher of teachers">
-            <td>{{teacher.name}}</td>
-            <td>{{ teacher.birthDay | date:'dd/MM/yyyy' }}</td>   
+          <tr *ngFor="let professor of professores">
+            <td>{{professor.nome}}</td>
+            <td>{{professor.sobrenome}}</td>
+            <td>{{professor.dataNascimento | date:'dd/MM/yyyy' }}</td>   
             <td>
               <a title="Detalhes" class="btn btn-primary">
                 <span class="glyphicon glyphicon-search"></span> Saber Mais
               </a>
             </td>
           </tr>         
-          <tr *ngIf="!showRecords">
+          <tr *ngIf="!exibirResultados">
               <td colspan="3">Nenhum registro encontrado</td>
           </tr>
         </tbody>

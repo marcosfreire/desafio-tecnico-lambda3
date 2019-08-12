@@ -54,7 +54,7 @@ namespace DesafioTecnico.Lambda3.Api.Controllers
         public IActionResult Post(ProfessorModel model)
         {
             try
-            {
+            {   
                 var professor = _mapper.Map<ProfessorModel, Professor>(model);
 
                 if (!ProfessorValido(professor))

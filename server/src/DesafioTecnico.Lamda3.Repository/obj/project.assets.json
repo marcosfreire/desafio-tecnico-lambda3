@@ -8028,11 +8028,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\projetos\\pessoal\\estudos\\desafio-tecnico-lambda3\\src\\DesafioTecnico.Lamda3.Repository\\DesafioTecnico.Lamda3.Repository.csproj",
+      "projectUniqueName": "C:\\projetos\\pessoal\\estudos\\desafio-tecnico-lambda3\\server\\src\\DesafioTecnico.Lamda3.Repository\\DesafioTecnico.Lamda3.Repository.csproj",
       "projectName": "DesafioTecnico.Lamda3.Repository",
-      "projectPath": "C:\\projetos\\pessoal\\estudos\\desafio-tecnico-lambda3\\src\\DesafioTecnico.Lamda3.Repository\\DesafioTecnico.Lamda3.Repository.csproj",
+      "projectPath": "C:\\projetos\\pessoal\\estudos\\desafio-tecnico-lambda3\\server\\src\\DesafioTecnico.Lamda3.Repository\\DesafioTecnico.Lamda3.Repository.csproj",
       "packagesPath": "C:\\Users\\Marcos Freire\\.nuget\\packages\\",
-      "outputPath": "C:\\projetos\\pessoal\\estudos\\desafio-tecnico-lambda3\\src\\DesafioTecnico.Lamda3.Repository\\obj\\",
+      "outputPath": "C:\\projetos\\pessoal\\estudos\\desafio-tecnico-lambda3\\server\\src\\DesafioTecnico.Lamda3.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8051,8 +8051,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\projetos\\pessoal\\estudos\\desafio-tecnico-lambda3\\src\\DesafioTecnico.Lamda3.Domain\\DesafioTecnico.Lamda3.Domain.csproj": {
-              "projectPath": "C:\\projetos\\pessoal\\estudos\\desafio-tecnico-lambda3\\src\\DesafioTecnico.Lamda3.Domain\\DesafioTecnico.Lamda3.Domain.csproj"
+            "C:\\projetos\\pessoal\\estudos\\desafio-tecnico-lambda3\\server\\src\\DesafioTecnico.Lamda3.Domain\\DesafioTecnico.Lamda3.Domain.csproj": {
+              "projectPath": "C:\\projetos\\pessoal\\estudos\\desafio-tecnico-lambda3\\server\\src\\DesafioTecnico.Lamda3.Domain\\DesafioTecnico.Lamda3.Domain.csproj"
             }
           }
         }

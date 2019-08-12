@@ -19,6 +19,7 @@ export class DateUtils {
     }
 
     public static getMyDatePickerDate(myDate: any): Date {
+        if(!myDate) return undefined;
         return new Date(myDate.date.year, myDate.date.month - 1, myDate.date.day);
     }
 
@@ -36,7 +37,8 @@ export class DateUtils {
             maxYear: dateNow.getFullYear() + 3,
             // disableSince:{ year: dateNow.getFullYear(), month: dateNow.getUTCMonth() + 1, day: dateNow.getDate() },            
             height: '34px',
-            width: '350px'
+            width: '350px',
+            editableDateField:true
         };
 
         return myDatePickerOptions;

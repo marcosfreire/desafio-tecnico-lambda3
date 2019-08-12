@@ -24,18 +24,18 @@ export class HttpbaseService {
   post(resource: string, body: any, headers?: HttpHeaders) {
     const header = headers || this.headers;
     let url = environment.baseUrl + resource;    
-    return this.http.post(url, body, { headers: header }).map((response: any) => response).pipe();
+    return this.http.post(url, body, { headers: header }).map((response: any) => response);
   }
 
   put(resource: string, body: any, headers?: HttpHeaders) {
     const header = headers || this.headers;
     let url = environment.baseUrl + resource;
-    return this.http.put(url, body, { headers: header }).map((response: any) => response).pipe();
+    return this.http.put(url, body, { headers: header }).map((response: any) => response);
   }
 
   delete(resource: string, headers?: HttpHeaders) {
     const header = headers || this.headers;
     let url = environment.baseUrl + resource;
-    return this.http.delete(url, { headers: header }).map((response: any) => response).pipe();
+    return this.http.delete(url, { headers: header }).map((response: any) => response).catch;
   }
 }
