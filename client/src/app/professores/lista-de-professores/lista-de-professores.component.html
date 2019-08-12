@@ -1,10 +1,10 @@
 
-  <h2>Professores</h2>
+  <h2>Lista de Professores</h2>
   
   <div class="row">
       <div class="col-md-12">
         <div class="pull-left">
-          <a class="btn btn-primary" id="novoEvento" [routerLink]="['/professores/novo']">
+          <a class="btn btn-primary" id="novoProfessor" [routerLink]="['/professores/novo']">
             <span title="Novo" class="glyphicon glyphicon-plus-sign"></span> Novo
           </a>
         </div>
@@ -30,8 +30,14 @@
             <td>{{professor.sobrenome}}</td>
             <td>{{professor.dataNascimento | date:'dd/MM/yyyy' }}</td>   
             <td>
-              <a title="Detalhes" class="btn btn-primary">
-                <span class="glyphicon glyphicon-search"></span> Saber Mais
+              <a [routerLink]="['/professores/excluir', professor.id]"  title="Excluir" class="btn btn-danger">
+                <span class="glyphicon glyphicon-trash"></span>
+              </a>&nbsp; 
+              <a [routerLink]="['/professores/detalhes', professor.id]"  title="Detalhes" class="btn btn-primary">
+                <span class="glyphicon glyphicon-search"></span>
+              </a>  &nbsp; 
+              <a [routerLink]="['/professores/editar', professor.id]"  title="Editar" class="btn btn-warning">
+                <span class="glyphicon glyphicon-pencil"></span>
               </a>
             </td>
           </tr>         

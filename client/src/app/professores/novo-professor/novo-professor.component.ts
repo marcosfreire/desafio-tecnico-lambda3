@@ -3,7 +3,9 @@ import { DateUtils } from 'src/app/utils/data-type-utils/date-utils';
 import { SeoService } from 'src/app/services/seo.service';
 import { HttpbaseService } from 'src/app/services/httpbase.service';
 import { Router } from '@angular/router';
-import { Course, ProfessorViewModel } from '../ProfessorViewModel';
+import { ProfessorViewModel } from 'src/app/view-models/ProfessorViewModel';
+import { DisciplinaViewModel } from 'src/app/view-models/DisciplinaViewModel';
+
 
 @Component({
   selector: 'app-novo-professor',
@@ -18,9 +20,9 @@ export class NovoProfessorComponent implements OnInit {
 
   public professor = new ProfessorViewModel;
 
-  public disciplinas: Course[];
+  public disciplinas: DisciplinaViewModel[];
   public idDisciplinaSelecionada: number = 0;
-  public disciplinasSelecionadas: Course[] = [];
+  public disciplinasSelecionadas: DisciplinaViewModel[] = [];
   public exibirTabelaDisciplinas:boolean = false;
     
   public myDatePickerOptions = DateUtils.getMyDatePickerOptions();

@@ -1,14 +1,11 @@
+import { DisciplinaViewModel } from './DisciplinaViewModel';
+
 export class ProfessorViewModel {
     constructor(
         public id?: number,        
         public nome?: string,
-        public dataNascimento?: Date,
-        public disciplinas?:Course[],
+        public dataNascimento?: Object,
+        public disciplinas?:DisciplinaViewModel[],
         public sobrenome?:string,
     ) {}
-}
-
-export interface Course {
-    id: string;
-    name: string;
 }

@@ -33,6 +33,9 @@ import { NovoProfessorComponent } from './professores/novo-professor/novo-profes
 // Locales
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
+import { ExcluirProfessorComponent } from './professores/excluir-professor/excluir-professor.component';
+import { DetalhesProfessorComponent } from './professores/detalhes-professor/detalhes-professor.component';
+import { EditarProfessorComponent } from './professores/editar-professor/editar-professor.component';
 
 registerLocaleData(localePt);
 
@@ -45,7 +48,10 @@ registerLocaleData(localePt);
     HomeComponent,
     MenuLoginComponent,
     ListaDeProfessoresComponent,
-    NovoProfessorComponent
+    NovoProfessorComponent,
+    ExcluirProfessorComponent,
+    DetalhesProfessorComponent,
+    EditarProfessorComponent
   ],
   imports: [
     BrowserModule,

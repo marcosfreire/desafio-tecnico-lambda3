@@ -1,0 +1,83 @@
+<h2>Excluir Professor</h2>
+
+<hr />
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="pull-left">
+      <a class="btn btn-primary" id="voltar" [routerLink]="['/professores']">
+        <span title="Novo" class="glyphicon glyphicon-chevron-left"></span> Voltar
+      </a>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<form (ngSubmit)="excluirProfessor()">
+
+  <div class="form-horizontal">
+
+    <div class="col-md-8">
+      <div class="form-group">
+        <label class="col-md-3" for="nome">Nome</label>
+        <div class="col-md-4">
+          {{professor.nome}}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-3" for="nome">Sobrenome</label>
+        <div class="col-md-4">
+          {{professor.sobrenome}}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="dataNascimento" class="col-md-3">Data de Nascimento</label>
+        <div class="col-md-4">
+          {{ professor.dataNascimento | date:'dd/MM/yyyy' }}
+        </div>
+      </div>
+
+      <hr />
+      Disciplinas
+      <hr />
+      <table class="table table-striped">
+
+        <tbody>
+          <tr *ngFor="let disciplina of disciplinasSelecionadas">
+            <td>{{disciplina.nome}}</td>
+            <td>
+              <a title="Remover" class="btn btn-danger" (click)="removerDisciplina(disciplina.id)">
+                <span class="glyphicon glyphicon-remove"></span>
+              </a>
+            </td>
+          </tr>
+          <tr *ngIf="!exibirTabelaDisciplinas">
+            <td colspan="3">Nenhuma disciplina vinculada.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="pull-left">
+            <button type="submit" class="btn btn-danger">Excluir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div *ngIf="exibirErros">
+        <strong>{{tituloErros}}</strong>
+        <hr />
+        <ul>
+          <li class="text-danger" *ngFor="let error of errors">{{error}}</li>
+        </ul>
+        <hr />
+      </div>
+    </div>
+  </div>
+
+</form>
