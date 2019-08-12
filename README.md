@@ -7,7 +7,7 @@ Este repositorio foi criado para realizar o desenvolvimento do desafio tecnico d
 Para iniciar o uso deste projeto de exemplo , basta realizar o comando abaixo:
 
 ```
-git clone https://github.com/marcosfreire/learning-ef-core.git
+git clone https://github.com/marcosfreire/desafio-tecnico-lambda3.git
 ``` 
     
 Após o clone do projeto, é necessário realizar os comandos baixo
