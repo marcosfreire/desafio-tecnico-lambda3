@@ -2,7 +2,7 @@
 
 Este repositorio foi criado para realizar o desenvolvimento do desafio tecnico da lambda3.
  
-## Comeãndo
+## Começando
 
 Para iniciar o uso deste projeto de exemplo , basta realizar o comando abaixo:
 
